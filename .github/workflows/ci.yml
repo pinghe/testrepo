@@ -1,3 +1,9 @@
+name: dagger
+on:
+  push:
+    branches: [main]
+
+jobs:
   hello:
     name: hello
     runs-on: ubuntu-latest
