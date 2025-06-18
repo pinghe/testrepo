@@ -1,0 +1,19 @@
+  hello:
+    name: hello
+    runs-on: ubuntu-latest
+
+    container:
+      image: ghcr.io/pinghe/podman:5.5.1
+
+    steps:
+      - name: Print environment
+        run: |
+          uname -a
+          echo "podman: $(which podman)"
+          podman --version
+          echo "docker: $(which docker)"
+          # docker --version
+          podman info --debug | grep -i rootless
+          # loginctl enable-linger $USER
+          # cat /etc/subuid | grep $USER   # 应有类似 $USER:100000:65536 的条目
+          # cat /etc/subgid | grep $USER
