@@ -19,6 +19,7 @@ jobs:
           podman --version
           echo "docker: $(which docker)"
           # docker --version
+          whoami
           cat /etc/subuid
           podman info --debug | grep -i rootless
           # loginctl enable-linger $USER
