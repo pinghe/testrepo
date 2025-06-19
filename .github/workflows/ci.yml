@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      # image: ghcr.io/pinghe/podman:main
-      image: toolbelt/podman
-
+      image: ghcr.io/pinghe/podman:main
+      # image: toolbelt/podman
+      options: --privileged --security-opt seccomp=unconfined 
     steps:
       - name: Print environment
         run: |
