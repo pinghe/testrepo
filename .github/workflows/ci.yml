@@ -19,7 +19,7 @@ jobs:
           podman --version
           echo "docker: $(which docker)"
           # docker --version
-
+          cat /etc/containers/storage.conf
           cat /etc/subuid
           whoami
           cat /etc/subgid
