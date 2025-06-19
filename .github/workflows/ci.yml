@@ -17,9 +17,9 @@ jobs:
       - name: Print environment
         run: |
           uname -a
-          # echo "podman: $(which podman)"
+          echo "podman: $(which podman)"
           # podman --version
-          # echo "docker: $(which docker)"
+          echo "docker: $(which docker)"
           # docker --version
           # # # service  -l
           # # cat /etc/containers/storage.conf
