@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: ghcr.io/pinghe/podman:5.5.1
+      image: ghcr.io/pinghe/podman:main
 
     steps:
       - name: Print environment
