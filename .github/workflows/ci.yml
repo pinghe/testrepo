@@ -19,6 +19,7 @@ jobs:
           podman --version
           echo "docker: $(which docker)"
           # docker --version
+          cat /etc/subuid
           podman info --debug | grep -i rootless
           # loginctl enable-linger $USER
           # cat /etc/subuid | grep $USER   # 应有类似 $USER:100000:65536 的条目
