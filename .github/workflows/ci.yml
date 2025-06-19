@@ -2,9 +2,9 @@ name: dagger
 on:
   push:
     branches: [main]
-env:
-  DOCKER_TLS_VERIFY: 0
-  DOCKER_HOST: tcp://localhost:2375
+# env:
+#   DOCKER_TLS_VERIFY: 0
+#   DOCKER_HOST: tcp://localhost:2375
 
 jobs:
   hello:
@@ -20,6 +20,7 @@ jobs:
       - name: Print environment
         run: |
           uname -a
+          env
           echo "podman: $(which podman)"
           # podman --version
           echo "docker: $(which docker)"
