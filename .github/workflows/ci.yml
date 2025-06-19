@@ -19,12 +19,12 @@ jobs:
           echo "podman: $(which podman)"
           podman --version
           echo "docker: $(which docker)"
-          # docker --version
-          # service  -l
-          cat /etc/containers/storage.conf
-          cat /etc/subuid
+          docker --version
+          # # service  -l
+          # cat /etc/containers/storage.conf
+          # cat /etc/subuid
           whoami
-          cat /etc/subgid
+          # cat /etc/subgid
           podman info --debug | grep -i rootless
           # loginctl enable-linger $USER
           # cat /etc/subuid | grep $USER   # 应有类似 $USER:100000:65536 的条目
