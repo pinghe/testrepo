@@ -29,3 +29,11 @@ jobs:
           # loginctl enable-linger $USER
           # cat /etc/subuid | grep $USER   # 应有类似 $USER:100000:65536 的条目
           # cat /etc/subgid | grep $USER
+      - name: Install Dagger(Call)
+        uses: dagger/dagger-for-github@8.0.0
+        with:
+          version: "latest"
+      - name: Chain in dagger shell
+        run: |
+          container | from m.daocloud.io/docker.io/library/alpine | file /etc/os-release | contents
+        shell: dagger {0}
