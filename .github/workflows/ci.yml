@@ -12,7 +12,7 @@ jobs:
       # image: ghcr.io/pinghe/podman:main
       image: docker.gitea.com/runner-images:ubuntu-latest
       # image: toolbelt/podman
-      options: --security-opt seccomp=unconfined 
+      # options: --security-opt seccomp=unconfined 
     steps:
       - name: Print environment
         run: |
