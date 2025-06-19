@@ -8,10 +8,10 @@ jobs:
     name: hello
     runs-on: ubuntu-latest
 
-    container:
-      image: ghcr.io/pinghe/podman:main
-      # image: toolbelt/podman
-      options: --security-opt seccomp=unconfined 
+    # container:
+    #   image: ghcr.io/pinghe/podman:main
+    #   # image: toolbelt/podman
+    #   options: --security-opt seccomp=unconfined 
     steps:
       - name: Print environment
         run: |
